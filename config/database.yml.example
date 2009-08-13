@@ -1,0 +1,19 @@
+development:
+  adapter: mysql
+  encoding: utf8
+  database: pages_development
+  username: root
+  password:
+
+test: &TEST
+  adapter: mysql
+  encoding: utf8
+  database: pages_test
+  username: root
+  password:
+
+production:
+  development
+
+cucumber:
+  <<: *TEST

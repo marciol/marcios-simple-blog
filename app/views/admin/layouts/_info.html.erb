@@ -1,0 +1,5 @@
+<p id="info">
+	<%=t :welcome %>, <%= current_user.name %><br/>
+	[ <%= link_to t(:frontend), root_path %> ]
+	[ <%= link_to t(:logout), admin_logout_path %> ]
+</p>

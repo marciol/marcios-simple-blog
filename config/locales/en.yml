@@ -1,0 +1,79 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  created_by: "Created by"
+  welcome: "Welcome"
+  frontend: "Frontend"
+  logout: "Logout"
+  log_in: "Log In"
+  login: "Login"
+  password: "Password"
+  login_message: "Logged in successfully"
+  logout_message: "You have been logged out."
+  failed_login: "Couldn't log you in as"
+  not_authorized: "You must be logged in to access this page"
+  unauthorized: "You don't have access here."
+  menu_users: "Users"
+  menu_admins: "Admins"
+  menu_pages: "Pages"
+  listing: "Listing"
+  pages: "Pages"
+  users: "Users"
+  user_name: "Name"
+  user_email: "Email"
+  new_page: "New Page"
+  new_user: "New User"
+  reorder: "Reorder"
+  reorder_children: "Reorder children"
+  new_child: "New Child"
+  edit: "Edit"
+  destroy: "Destroy"
+  are_you_sure: "Are you sure?"
+  new: "New"
+  editing: "Editing"
+  create: "Create"
+  update: "Update"
+  back: "Back"
+  permissions: "Permissions (Roles)"
+  contact_from: "Contact from"
+  message_sent: "Your message was sent."
+
+  # Resource Controller Messages
+  success_create: "Successfully created!"
+  success_update: "Successfully updated!" 
+  success_remove: "Successfully removed!"
+
+  activerecord:
+    attributes:
+      _all:
+        name: "Name"
+        body: "Body"
+        description: "Description"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        metatag_title: "Metatag Title"
+        metatag_keywords: "Metatag Keywords"
+        metatag_description: "Metatag Description"
+
+  authlogic:
+    error_messages:
+      login_blank: can not be blank
+      login_not_found: is not valid
+      login_invalid: should use only letters and numbers
+      consecutive_failed_logins_limit_exceeded: Consecutive failed logins limit exceeded, account is disabled.
+      email_invalid: should look like an email address.
+      password_blank: can not be blank
+      password_invalid: is not valid
+      not_active: Your account is not active
+      not_confirmed: Your account is not confirmed
+      not_approved: Your account is not approved
+      no_authentication_details: You did not provide any details for authentication.
+    models:
+      user_session: UserSession
+    attributes:
+      user_session:
+        login: login
+        email: email
+        password: password
+        remember_me: remember me
