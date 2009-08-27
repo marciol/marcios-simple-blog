@@ -1,7 +1,10 @@
-<h1><%= @page.name %></h1>
+<div class="content_piece" >
+  <div class="title">
+    <h1><%= @page.name %></h1>
+  </div>
 
-<%= render :partial => 'sidebar' %>
-
-<div id="content">
-	<%= @page.body %>
+  <div class="page_body">
+    <%= @page.body %>
+  </div>
 </div>
+

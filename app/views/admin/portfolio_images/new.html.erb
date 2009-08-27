@@ -1,0 +1,10 @@
+<h1><%=t :new %> Image</h1>
+
+<%= error_messages_for :image %>
+
+<% form_for(@object, :url => admin_portfolio_images_path, :live_validations => true, :html => {:multipart => true }) do |f| %>
+  <%= render :partial => "form", :locals => { :f => f } %>
+  <p class="submit"><%= submit_tag t(:create) %></p>
+<% end %>
+<br/>
+<%= link_to t(:back), admin_portfolio_images_path %>

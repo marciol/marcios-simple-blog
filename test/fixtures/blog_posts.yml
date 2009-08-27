@@ -1,0 +1,13 @@
+one:
+  name: MyString
+  permalink: MyString
+  content: MyText
+  is_protected: false
+  allow_comments: false
+
+two:
+  name: MyString
+  permalink: MyString
+  content: MyText
+  is_protected: false
+  allow_comments: false

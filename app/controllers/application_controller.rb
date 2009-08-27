@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   helper_method :current_user_session, :current_user, :logged_in?
 
+  before_filter :general_content
   # See ActionController::RequestForgeryProtection for details
   protect_from_forgery
 
@@ -72,6 +73,9 @@ class ApplicationController < ActionController::Base
     # Uncomment this line to view the error pages in development mode
     # alias_method :rescue_action_locally, :rescue_action_in_public
 
+    def general_content
+      @side_bar = Page.find_by_permalink('side-bar')
+    end
 
 end
 

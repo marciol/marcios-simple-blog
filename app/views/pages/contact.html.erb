@@ -1,27 +1,39 @@
-<h1><%= @page.name %></h1>
+<div class="content_piece" >
+  <div class="title">
+    <h2><%= t(@page.name.gsub(/\s*/, "").underscore.to_sym) %></h2>
+  </div>
 
-<%= @page.body %>
+  <%= @page.body %>
 
-<% form_for('contact') do |f| %>
-	<p>
-		<%= f.label(:name) %>
-		<%= f.text_field :name %>
-	</p>
-	<p>
-		<%= f.label(:email) %>
-		<%= f.text_field :email %>
-	</p>
-	
-	<p>
-		<%= f.label(:message) %>
-		<%= f.text_area :message %>
-	</p>
-	
-	<% [:error, :notice].each do |message| %>
-		<% content_tag :div, :class => message do %>
-			<%= flash[message] %>
-		<% end if flash[message] %>
-	<% end %>
+  <div class="form">
+  <% form_for('contact') do |f| %>
+          <div class="left_form">
+            <p>
+                    <%= f.label :name, "*" + t(:name) %>
+                    <%= f.text_field :name, :class => "text" %>
+            </p>
+            <p>
+                    <%= f.label :email, "*" + t(:email) %>
+                    <%= f.text_field :email, :class => "text" %>
+            </p>
+          </div>
+          
+          <div class="right_form">
+            <p>
+                    <%= f.label :message, "*" + t(:message) %>
+                    <%= f.text_area :message %>
+            </p>
+          </div>
+          
+          <% [:error, :notice].each do |message| %>
+                  <% content_tag :div, :class => message do %>
+                          <%= flash[message] %>
+                  <% end if flash[message] %>
+          <% end %>
 
-	<%= submit_tag("Submit") %>
-<% end %>
+          <div id="submit">
+            <%= submit_tag("Submit", :value => t(:send), :class => "submit" ) %>
+          </div>
+  <% end %>
+</div>
+</div>

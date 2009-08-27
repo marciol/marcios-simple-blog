@@ -1,0 +1,30 @@
+<h1><%=t :listing %> Blog Posts</h1>
+
+<table id="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Body</th>
+      <th>Created at</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+  <%- @blog_posts.each do |blog_post|%>
+    <tr>
+      <td><%=h blog_post.name %></td>
+      <td><%=h blog_post.content.summary(200) %></td>
+      <td><%= blog_post.created_at.to_s(:long) %></td>
+      <td><%=link_to "Comments(#{blog_post.blog_comments.size})", admin_blog_post_blog_comments_path(blog_post) %></td>
+      <td><%=link_to t(:edit), edit_admin_blog_post_path(blog_post) %></td>
+      <td><%=link_to t(:destroy), admin_blog_post_path(blog_post), :confirm => t(:are_you_sure), :method => :delete %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Post', new_admin_blog_post_path %> |
+  <%= link_to 'Reorder', reorder_admin_blog_posts_path %>
+
+<%= render :partial => '/admin/scaffold/data_table', :locals => {:sort => '[[ 2, "desc" ]]'} %>
+

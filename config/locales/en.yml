@@ -2,6 +2,23 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  who_i_am: "Who I Am"
+  portfolio: "Portfolio"
+  services: "Services"
+  search: "Search"
+  contact: "Contact"
+  send: "Send"
+  slimbox_counter_text: "Image {x} of {y}"
+  sorry_not_allow_comments: "Sorry, comments for this post is closed!"
+  message: "Message"
+  comment: "Comment"
+  send_a_comment: "Send a Comment"
+  send_comment: "Send the Comment"
+  name: "Name"
+  email: "Email (will not be published)"
+  site: "Site"
+  comments: "Comments"
+  read_more: "read more &rarr;"
   created_by: "Created by"
   welcome: "Welcome"
   frontend: "Frontend"

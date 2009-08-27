@@ -1,0 +1,20 @@
+<% title "Blog Comment" %>
+
+<p>
+  <strong>Author:</strong>
+  <%=h @blog_comment.author %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%=h @blog_comment.email %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%=h @blog_comment.content %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_blog_comment_path(@blog_comment) %> |
+  <%= link_to "Destroy", @blog_comment, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", blog_comments_path %>
+</p>

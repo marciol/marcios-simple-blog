@@ -1,0 +1,18 @@
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label :tag_list, "Tags" %>
+  <%= f.text_field :tag_list %>
+</p>
+<p>
+  <%= f.label :content %>
+  <%= fckeditor_textarea "blog_post", "content", :height => "400px" %>
+</p>
+<p>
+  <%= f.label :allow_comments %>
+  <%= f.check_box :allow_comments %>
+</p>
+
+<%= render :partial => "/admin/meta_tags/form", :locals => { :f => f } %>

@@ -1,0 +1,30 @@
+<h1><%=t :listing %> Images</h1>
+
+<table id="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Thumb</th>
+      <th>Website</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <%- @portfolio_images.each do |image|%>
+    <tr>
+      <td><%=h image.name %></td>
+      <td><%= image_tag image.screenshot.url(:thumb) %></td>
+      <td><%=h image.website_url %></td>
+      <td><%=h image.description.summary(200) %></td>
+      <td><%=link_to t(:edit), edit_admin_portfolio_image_path(image) %></td>
+      <td><%=link_to t(:destroy), admin_portfolio_image_path(image), :confirm => t(:are_you_sure), :method => :delete %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Image', new_admin_portfolio_image_path %> |
+  <%= link_to 'Reorder', reorder_admin_portfolio_images_path %>
+
+<%= render :partial => '/admin/scaffold/data_table', :locals => {:sort => '[[ 2, "desc" ]]'} %>
+

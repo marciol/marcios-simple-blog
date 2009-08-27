@@ -26,6 +26,9 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "aws-s3", :lib => "aws/s3"
   # config.gem "thoughtbot-shoulda", :lib => "shoulda", :source => 'http://gems.github.com'
+  config.gem 'mislav-will_paginate', :version => '~> 2.3.11', :lib => 'will_paginate', :source => 'http://gems.github.com'
+  config.gem "mbleigh-acts-as-taggable-on", :source => "http://gems.github.com", :lib => "acts-as-taggable-on"
+  config.gem "simplificator-rwebthumb", :source => "http://gems.github.com", :lib => "rwebthumb" 
 
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
@@ -47,7 +50,7 @@ Rails::Initializer.run do |config|
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
-  # config.i18n.default_locale = "pt-BR"
+  config.i18n.default_locale = "pt-BR"
 
   # Your secret key for verifying cookie session data integrity.
   # If you change this key, all old sessions will become invalid!
@@ -73,16 +76,19 @@ Rails::Initializer.run do |config|
   old_verbose = $VERBOSE
   $VERBOSE = nil
 
-  SITE_NAME = '* SITE NAME HERE *'
-  SITE_DOMAIN = 'changeme.com'
+  SITE_NAME = '* ARTE PROGRAMA *'
+  SITE_DOMAIN = 'arteprograma.com.br'
   SITE_URL = "http://www.#{SITE_DOMAIN}/"
-  SITE_EMAIL = "contact@#{SITE_DOMAIN}"
+#  SITE_EMAIL = "contact@#{SITE_DOMAIN}"
+  SITE_EMAIL = "marcitolopes@gmail.com"
   SITE_META_KEYWORDS = ""
 
   $VERBOSE = old_verbose
 end
 
 LiveValidations.use :jquery_validations
+
+ActionController::Base.send :helper, TagsHelper 
 
 require 'order'
 require 'summary'

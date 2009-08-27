@@ -13,26 +13,63 @@
 	<meta name="revisit-after" content="30 days"/>
 	<meta name="copyright" content="DBurns Design"/>
 
-	<%= stylesheet_link_tag "default" %>
+	<%= stylesheet_link_tag "default", "plugins/slimbox2" %>
 
 	<link href="/favicon.ico" type="image/x-icon" rel="icon"/>
 	<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
 
-	<%= javascript_include_tag :defaults, "plugins/crossbrowser", "http://www.google-analytics.com/ga", "default" %>
+        <% javascript_tag do %>
+          var slimbox_counter_text = "<%= I18n.t(:slimbox_counter_text) %>";
+        <% end -%>
+	<%= javascript_include_tag :defaults, "plugins/crossbrowser", "http://www.google-analytics.com/ga", "default", "jquery.kwicks-1.5.1", "plugins/validate", validate_i18n, "plugins/slimbox2", "plugins/tools.tooltip-1.0.2.min", "plugins/jquery.easing.1.3"  %>
 	<%= yield :head %>
 </head>
 <body>
-
-<div id="content">
-	<% [:error, :notice].each do |message| %>
-		<% content_tag :div, :class => message do %>
-			<%= flash[message] %>
-		<% end if flash[message] %>
-	<% end %>
-	<%= yield  %>
-</div>
-
-<div id="footer"><%= link_to 'Professional Website Design', 'http://www.dburnsdesign.com', :target => '_blank' %> by DBurns Design</div>
-
-</body>
+  <div id="background_layer">
+    <div id="wrapper" >
+      <div id="menu" >
+        <ul>
+          <li id="first"><%= link_to t(:who_i_am), page_path('quem-sou') %></li>
+          <li id="second"><%= link_to t(:portfolio), portfolio_images_path %></li>
+          <li id="third"><%= link_to t(:services), page_path('servicos') %></li>
+          <li id="fourth"><%= link_to t(:contact), page_path('contact') %></li>
+          <li id="fifth"><%= link_to "RSS", blog_posts_path(:format => :atom) %></li>
+        </ul>
+        <div id="search" >
+          <% form_tag search_blog_posts_path do %>
+            <%= text_field_tag :search, params[:search], :class => "search-text" %>
+            <%= submit_tag t(:search), :class => "search-submit" %>
+          <% end -%>
+        </div><!-- search -->
+      </div><!-- menu -->
+      <% link_to root_path do %>
+        <div id="title" >
+          <h1>Arte Programa</h1>
+        </div>
+      <% end -%>
+      <div id="main" >
+        <div id="rigth-column">
+          <div id="content">
+            <%= yield  %>
+          </div><!-- content -->
+        </div><!-- rigth-column -->
+        <div id="left-column" >
+          <div id="left-content">
+            <div class="left-box working-with-rails">
+              <a href="http://workingwithrails.com/recommendation/new/person/17487-marcio-lopes-de-faria"><img alt="Recommend Me" src="http://workingwithrails.com/images/tools/compact-med.jpg" /></a>
+            </div>
+            <%= yield :tag_cloud %>
+            <%= @side_bar.body %>
+          </div><!-- left-content -->
+        </div><!-- left-column -->
+      </div><!-- main -->
+    </div><!-- wrapper -->
+    <div class="transparent_bg" id="above_footer"></div>
+    <div id="footer">
+      <p>
+        Design by <cite>Marcio Lopes de Faria</cite>
+      </p>
+    </div><!-- footer -->
+  </div><!-- background-layer -->
+  </body>
 </html>

@@ -1,0 +1,2 @@
+module Admin::BlogCommentsHelper
+end

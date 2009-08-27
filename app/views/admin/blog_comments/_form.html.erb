@@ -1,0 +1,16 @@
+<p>
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+</p>
+<p>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+</p>
+<p>
+  <%= f.label :website %>
+  <%= f.text_field :website %>
+</p>
+<p>
+  <%= f.label :body %>
+  <%= fckeditor_textarea "blog_comment", "content", :height => "400px" %>
+</p>

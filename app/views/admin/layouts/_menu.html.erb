@@ -1,10 +1,12 @@
 <ul id="menu">
-	<li>
-		<%= link_to t(:menu_users), admin_users_path %>
-		<ul>
-			<li><%= link_to t(:menu_users), admin_users_path %></li>
-			<li><%= link_to t(:menu_admins), admin_users_path(:role => 'admin')  %></li>
-		</ul>
-	</li>
-	<li><%= link_to t(:menu_pages), admin_pages_path %></li>
+  <li>
+    <%= link_to t(:menu_users), admin_users_path %>
+    <ul>
+      <li><%= link_to t(:menu_users), admin_users_path %></li>
+      <li><%= link_to t(:menu_admins), admin_users_path(:role => 'admin')  %></li>
+    </ul>
+  </li>
+  <li><%= link_to t(:menu_pages), admin_pages_path %></li>
+  <li><%= link_to "Posts", admin_blog_posts_path %></li>
+  <li><%= link_to "Portfolio", admin_portfolio_images_path %></li>
 </ul>

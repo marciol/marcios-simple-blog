@@ -1,0 +1,12 @@
+<% content_for :tag_cloud do %>
+  <div class="left-box" >
+    <div class="title">
+      <h2>Tags</h2>
+    </div>
+    <div id="tagcloud">
+      <% tag_cloud(@tags, tag_classes) do |tag, tag_class| %>
+        <%= link_to tag.name, tags_path(tag.name), :class => tag_class %>
+      <% end -%>
+    </div>
+  </div>
+<% end -%>

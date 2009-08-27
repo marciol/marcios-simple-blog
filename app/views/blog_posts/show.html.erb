@@ -1,0 +1,63 @@
+<div class="content_piece">
+  <div class="title">
+    <h2><%= @blog_post.name %></h2>
+    <p>
+      <cite>publicado em: </cite> <%= I18n.l(@blog_post.created_at.to_date, :format => :long) %>
+    </p>
+  </div>
+  <div class="content_body">
+    <%= @blog_post.content %>
+  </div>
+  <div class="form">
+    <% content_tag :h2 do %>
+      <%= t(:comments) %>
+    <% end if @blog_post.blog_comments.any? %>
+    <ul>
+      <% for comment in @blog_post.blog_comments do %>
+        <li class=<%= cycle("even", "odd") %>>
+          <p class="author"><%= author(comment) %> disse em 21 de Agosto de 2009</p>
+          <%= simple_format(sanitize(comment.content)) %>
+        </li>
+      <% end -%>
+    </ul>
+    <% if @blog_post.allow_comments? %>
+      <% form_for [@blog_post, @comment] do |f| %>
+        <% if flash[:notice] %>
+          <p class="notice">
+            <%= flash[:notice] %>
+          </p>
+        <% else %>
+          <%= error_messages_for :comment, :class => "blog_comment" %>
+        <% end -%>
+        <h2><%= t(:send_a_comment) %></h2>
+        <div class="left_form">
+          <p>
+            <%= f.label :author, "*" + t(:name) %>
+            <%= f.text_field :author, :class => "text" %>
+          </p>
+          <p>
+            <%= f.label :email, "*" + t(:email) %>
+            <%= f.text_field :email, :class => "text" %>
+          </p>
+          <p>
+            <%= f.label :website, t(:site) %>
+            <%= f.text_field :website, :class => "text" %>
+          </p>
+        </div>
+        <div class="right_form">
+          <p>
+            <%= f.label :content, "*" + t(:comment) %>
+            <%= f.text_area :content %>
+          </p>
+          <div id="submit">
+            <%= submit_tag 'Comment', :value=> t(:send_comment), :class=>"submit", :id => "Comment" %>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <h2><%= t(:sorry_not_allow_comments) %></h2>
+    <% end -%>
+  </div>
+</div>
+
+<% render :partial => "layouts/tag_cloud" %>

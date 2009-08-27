@@ -1,0 +1,26 @@
+<h1><%=t :listing %> Comments</h1>
+
+<table id="table">
+  <thead>
+    <tr>
+      <th>Author</th>
+      <th>Summary</th>
+    </tr>
+  </thead>
+  <tbody>
+  <%- @blog_comments.each do |comment|%>
+    <tr>
+      <td><%=h comment.author %></td>
+      <td><%=h comment.content.summary(200) %></td>
+      <td><%=link_to t(:edit), edit_admin_blog_post_blog_comment_path(parent_object, comment) %></td>
+      <td><%=link_to t(:destroy), admin_blog_post_blog_comment_path(parent_object, comment), :confirm => t(:are_you_sure), :method => :delete %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Comment', new_admin_blog_post_blog_comment_path(parent_object) %> |
+  <%= link_to 'Back', admin_blog_posts_path %>
+
+<%= render :partial => '/admin/scaffold/data_table' %>
+

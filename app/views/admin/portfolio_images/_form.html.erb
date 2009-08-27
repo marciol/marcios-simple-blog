@@ -1,0 +1,12 @@
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label :website_url %>
+  <%= f.text_field :website_url %>
+</p>
+<p>
+  <%= f.label :description %>
+  <%= fckeditor_textarea "portfolio_image", "description", :height => "400px" %>
+</p>

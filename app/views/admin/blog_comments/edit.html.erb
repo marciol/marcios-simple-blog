@@ -1,0 +1,13 @@
+<h1><%=t :editing %> Blog Comment</h1>
+
+<%= error_messages_for :blog_comment %>
+
+<% form_for(@object, :url => admin_blog_post_blog_comment_path(parent_object, @object), :live_validations => true, :html => { :method => :put, :multipart => true }) do |f| %>
+  <%= render :partial => "form", :locals => { :f => f } %>
+  <p class="submit"><%=submit_tag t(:update)%></p>
+<% end %>
+
+<br/>
+
+<%= link_to t(:back), admin_blog_post_blog_comments_path(parent_object) %>
+

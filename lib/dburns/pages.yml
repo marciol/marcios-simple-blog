@@ -25,3 +25,69 @@ unprocessable_entity:
   permalink: "422"
   parent:
   is_protected: 1
+
+blog:
+  name: "Blog"
+  body: "Coming soon"
+  permalink: "blog"
+  parent:
+  is_protected: 1
+
+quem-sou:
+  name: "Quem Sou"
+  body: "Coming soon"
+  permalink: "quem-sou"
+  parent:
+  is_protected: 1
+
+servicos:
+  name: "Serviços"
+  body: "Coming soon"
+  permalink: "servicos"
+  parent:
+  is_protected: 1
+
+portfolio:
+  name: "Portfolio"
+  body: "Coming soon"
+  permalink: "portfolio"
+  parent:
+  is_protected: 1
+
+side_bar:
+  name: "Side Bar"
+  body: '<div class="left-box" >
+            <div class="title">
+                <h2>Amigos</h2>
+            </div>
+            <ul>
+              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.google.com">Google</a></li>
+            </ul>
+        </div>
+        <div class="left-box" >
+            <div class="title">
+                <h2>Software Livre & Afins</h2>
+            </div>
+            <ul>
+              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.google.com">Google</a></li>
+            </ul>
+        </div>'
+  permalink: 'side-bar'
+  parent:
+  is_protected: 1
