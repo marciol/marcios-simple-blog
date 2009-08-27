@@ -89,7 +89,7 @@ end
 
 LiveValidations.use :jquery_validations
 
-ActionController::Base.send :helper, TagsHelper 
+#ActionController::Base.send :helper, TagsHelper 
 
 require 'order'
 require 'summary'
