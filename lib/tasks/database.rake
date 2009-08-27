@@ -24,10 +24,10 @@ namespace :db do
       require 'dburns/setup'
       
       attributes = {
-        :admin_password => "bundinha",
-        :admin_login => "danieltburns",
-        :admin_email => "dev.dburns@gmail.com",
-        :admin_name => "Daniel Burns"
+        :admin_password => "bla2!k@",
+        :admin_login => "amarlua",
+        :admin_email => "marcitolopes@gmail.com",
+        :admin_name => "Marcio Lopes de Faria"
       }
       
       Dburns::Setup.bootstrap attributes

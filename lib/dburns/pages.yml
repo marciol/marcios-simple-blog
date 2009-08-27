@@ -60,9 +60,15 @@ servicos:
   body: '<p>
            Oferecemos serviços de desenvolvimento de Sistemas Web e Sites, para potencializar o seu negócio.
          </p>
-         <p>
-           Sistemas de Administração, Relatórios, Lojas Virtuais, CRM, melhora de performance e de posicionamento em máquinas de busca como google de sites já existentes.
-         </p>'
+         <ul>
+           <li>Sistemas de Administração e Relatórios acessíveis de qualquer lugar</li>
+           <li>Lojas Virtuais</li>
+           <li>Sites Administráveis</li>
+           <li>Websites Pessoais e customização de Blogs</li>
+           <li>Serviços de Programação para Designers</li>
+           <li>Melhora de Performance de Sites e Sistemas Web</li>
+           <li>Melhora de posicionamento de Websites em máquinas de busca como Google</li>
+         </ul>'
   permalink: "servicos"
   parent:
   is_protected: 1
