@@ -28,28 +28,48 @@ unprocessable_entity:
 
 blog:
   name: "Blog"
-  body: "Coming soon"
+  body: "Blog Page for Metatags"
   permalink: "blog"
   parent:
   is_protected: 1
 
 quem-sou:
   name: "Quem Sou"
-  body: "Coming soon"
+  body: '<p>
+            Meu Nome é Marcio Lopes de Faria. Sou programador e desenvolvo Sistemas Web utilizando diversas tecnologias, 
+            sendo as minhas preferidas dentre muitas <a href="http://www.rubyonrails.pro.br" target="_blank" >Ruby on Rails</a> e <a href="http://jquery.com" target="_blank" >Jquery</a>.
+         </p>
+         <p>
+            Sou formado bacharel tecnólogo em Processamento de Dados pela FATEC São Paulo desde 2007 e desde então passei pelas companhias
+            <a href="http://www.garageim.com" target="_blank">Garage Interactive Marketing</a> onde desenvolvi projetos em Asp.NET e Asp.NET MVC em C#, PHP e Ruby On Rails e 
+            <a href="http://www.dburnsdesign.com" target="_blank">DBurns Design</a> onde pude me aprimorar no desenvolvimento de aplicações utilizando Ruby On Rails utilizando
+            metodologias ágeis e BDD (Behaviour Driven Development) - Desenvolvimento Orientado a Comportamento.
+          </p>
+          <p>
+            Para conhecer o meu portfólio siga: <a href="/portfolio" >Portfolio</a>
+          </p>
+          <p>
+            Para conhecer os serviços que ofereço siga: <a href="/pages/servicos">Serviços</a>
+          </p>'
   permalink: "quem-sou"
   parent:
   is_protected: 1
 
 servicos:
   name: "Serviços"
-  body: "Coming soon"
+  body: '<p>
+           Oferecemos serviços de desenvolvimento de Sistemas Web e Sites, para potencializar o seu negócio.
+         </p>
+         <p>
+           Sistemas de Administração, Relatórios, Lojas Virtuais, CRM, melhora de performance e de posicionamento em máquinas de busca como google de sites já existentes.
+         </p>'
   permalink: "servicos"
   parent:
   is_protected: 1
 
 portfolio:
   name: "Portfolio"
-  body: "Coming soon"
+  body: "Portfolio Metatag Page"
   permalink: "portfolio"
   parent:
   is_protected: 1
@@ -61,15 +81,18 @@ side_bar:
                 <h2>Amigos</h2>
             </div>
             <ul>
-              <li><a href="http://www.google.com">Google</a></li>
-              <li><a href="http://www.google.com">Google</a></li>
-              <li><a href="http://www.google.com">Google</a></li>
-              <li><a href="http://www.google.com">Google</a></li>
-              <li><a href="http://www.google.com">Google</a></li>
-              <li><a href="http://www.google.com">Google</a></li>
-              <li><a href="http://www.google.com">Google</a></li>
-              <li><a href="http://www.google.com">Google</a></li>
-              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://akitaonrails.com">Fabio Akita</a></li>
+              <li><a href="http://www.nomedojogo.com">Carlos Brando</a></li>
+              <li><a href="http://simplesideias.com.br">Nando Vieira</a></li>
+              <li><a href="http://www.relaxos.com.br">Vinicius Quaiato</a></li>
+              <li><a href="http://marciotrindade.com">Marcio Trindade</a></li>
+              <li><a href="http://blog.shadowmaru.org">Ricardo Yasuda</a></li>
+              <li><a href="http://bolodefoobar.blogspot.com">Daniel Libanori</a></li>
+              <li><a href="http://ailtonribeiro.com">Ailton Ribeiro</a></li>
+              <li><a href="http://www.fabiovieira.com.br">Fabio Vieira</a></li>
+              <li><a href="http://www.philipecasarotte.com.br/works">Philipe Casarotte</a></li>
+              <li><a href="http://www.wylcon.com.br">Wylcon Cardoso</a></li>
+              <li><a href="http://www.flaviomuniz.com/blog">Flavio Muniz</a></li>
             </ul>
         </div>
         <div class="left-box" >
@@ -77,15 +100,9 @@ side_bar:
                 <h2>Software Livre & Afins</h2>
             </div>
             <ul>
-              <li><a href="http://www.google.com">Google</a></li>
-              <li><a href="http://www.google.com">Google</a></li>
-              <li><a href="http://www.google.com">Google</a></li>
-              <li><a href="http://www.google.com">Google</a></li>
-              <li><a href="http://www.google.com">Google</a></li>
-              <li><a href="http://www.google.com">Google</a></li>
-              <li><a href="http://www.google.com">Google</a></li>
-              <li><a href="http://www.google.com">Google</a></li>
-              <li><a href="http://www.google.com">Google</a></li>
+              <li><a href="http://www.pauloteixeira13.com.br/wordpress">Dep Paulo Teixeira</a></li>
+              <li><a href="http://www.simaopedro.com.br">Dep Simão Pedro</a></li>
+              <li><a href="http://samadeu.blogspot.com">Sergio Amadeu</a></li>
             </ul>
         </div>'
   permalink: 'side-bar'
