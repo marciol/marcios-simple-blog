@@ -4,10 +4,10 @@ $(function(){
     pageTracker._trackPageview();
     } catch(err) {}
 
-    $("#menu ul").kwicks({
-         max : 205,
-         spacing : 1 
-     });
+//    $("#menu ul").kwicks({
+//         max : 205,
+//         spacing : 1 
+//     });
 
     $("#portfolio-images a").slimbox(
       {
