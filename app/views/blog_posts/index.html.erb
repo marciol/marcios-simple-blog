@@ -9,7 +9,7 @@
       </p>
     </div>
     <div class="content_body">
-      <%= post.content[0..500] + "..." %>
+      <%= summary_paragraphs(post.content, 3) %>
     </div>
     <div class="read_more">
       <%= link_to t(:read_more), blog_post_path(post.permalink), :class => "read_more" %>
