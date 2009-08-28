@@ -23,6 +23,6 @@ module ApplicationHelper
       content.each("</p>") do |p|
         paragraphs << p
       end
-      (paragraphs.size > size ? paragraphs[1..size] : paragraphs).join()
+      (paragraphs.size > size ? paragraphs[0..size] : paragraphs).join()
     end
 end
