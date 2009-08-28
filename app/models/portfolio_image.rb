@@ -13,9 +13,12 @@ class PortfolioImage < ActiveRecord::Base
 
   validates_presence_of :name, :description
 
-  before_validation :download_remote_image
-
   after_save :remove_remote_image_file
+
+  def download_image_and_save
+    download_remote_image
+    save
+  end
 
 private
 
