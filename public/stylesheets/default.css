@@ -20,13 +20,13 @@ p, ol, ul, li  {color:#233636; margin:10px; line-height:20px;}
 
 /* wrapper */
 
-div#wrapper { margin:0px auto; width:964px;}
+div#wrapper { margin:0px auto; width:970px;}
 div#background_layer {background:transparent url('../images/background2.jpg') no-repeat top center; overflow:hidden;}
 
 
 /* columns */
 
-div#rigth-column { float:left; width:700px; }
+div#rigth-column { float:left; width:702px; }
 div#left-column { float:right; width:264px;}
 
 
