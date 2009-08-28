@@ -36,10 +36,10 @@
           <li id="fifth"><%= link_to "RSS", blog_posts_path(:format => :atom) %></li>
         </ul>
         <div id="search" >
-          <% form_tag search_blog_posts_path do %>
+          <!--<% form_tag search_blog_posts_path do %>
+          <% end -%>-->
             <%= text_field_tag :search, params[:search], :class => "search-text" %>
             <%= submit_tag t(:search), :class => "search-submit" %>
-          <% end -%>
         </div><!-- search -->
       </div><!-- menu -->
       <% link_to root_path do %>
