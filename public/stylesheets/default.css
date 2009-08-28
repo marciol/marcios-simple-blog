@@ -129,7 +129,7 @@ div#menu li#second {background-color:#315252;}
 div#menu li#third { background-color:#88bb9a;}
 div#menu li#fourth { background-color:#a9e1c6;}
 div#menu li#fifth { background-color:#D8F6E8; }
-div#menu li a { color:black; text-align:center; float:left; padding:19px; font-size:16px; font-weight:bold; }
+div#menu li a { color:black; text-align:center; float:left; padding:19px; font-size:16px; font-weight:bold; width:80px; }
 div#menu li:hover { background-color:#D6A7B8 !important;}
 div#menu li:hover a { color:#B62559 !important;}
 
