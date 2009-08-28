@@ -13,9 +13,9 @@ p, ol, ul, li  {color:#233636; margin:10px; line-height:20px;}
 
 /* search */
 
-#search { float:right; padding:33px 10px 0px; }
-#search input.search-text {display:inline; float:left; font-size:14px; color:#233636; padding:7px; border:none; width:130px; margin-right:5px; background:#D8F6E8 url(../images/magnifier.png) no-repeat scroll 4px 50%; padding-left:35px;}
-#search input.search-submit {display:inline; width:80px; height:32px;}
+#search { float:right; padding:33px 10px 0px; width:260px; }
+#search input.search-text {float:left; font-size:14px; color:#233636; padding:7px; border:none; width:130px; margin-right:5px; background:#D8F6E8 url(../images/magnifier.png) no-repeat scroll 4px 50%; padding-left:35px;}
+#search input.search-submit {width:80px; height:32px; float:right;}
 
 
 /* wrapper */
