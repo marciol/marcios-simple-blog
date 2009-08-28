@@ -2,7 +2,7 @@
 	Kwicks for jQuery (version 1.5.1)
 	Copyright (c) 2008 Jeremy Martin
 	http://www.jeremymartin.name/projects.php?project=kwicks
-	
+
 	Licensed under the MIT license:
 		http://www.opensource.org/licenses/mit-license.php
 
@@ -22,9 +22,9 @@
 		var o = $.extend(defaults, options);
 		var WoH = (o.isVertical ? 'height' : 'width'); // WoH = Width or Height
 		var LoT = (o.isVertical ? 'top' : 'left'); // LoT = Left or Top
-		
+
 		return this.each(function() {
-			container = $(this);
+			var container = $(this);
 			var kwicks = container.children('li');
 			var normWoH = kwicks.eq(0).css(WoH).replace(/px/,''); // normWoH = Normal Width or Height
 			if(!o.max) {
@@ -37,12 +37,12 @@
 				container.css({
 					width : kwicks.eq(0).css('width'),
 					height : (normWoH * kwicks.size()) + (o.spacing * (kwicks.size() - 1)) + 'px'
-				});				
+				});
 			} else {
 				container.css({
 					width : (normWoH * kwicks.size()) + (o.spacing * (kwicks.size() - 1)) + 'px',
 					height : kwicks.eq(0).css('height')
-				});				
+				});
 			}
 
 			// pre calculate left or top values for all kwicks but the first and last
@@ -59,7 +59,7 @@
 					}
 				}
 			}
-			
+
 			// loop through all kwick elements
 			kwicks.each(function(i) {
 				var kwick = $(this);
@@ -67,7 +67,7 @@
 				// set first kwick
 				if(i === 0) {
 					kwick.css(LoT, '0px');
-				} 
+				}
 				// set last kwick
 				else if(i == kwicks.size() - 1) {
 					kwick.css(o.isVertical ? 'bottom' : 'right', '0px');
@@ -93,7 +93,7 @@
 					margin: 0,
 					position: 'absolute'
 				});
-				
+
 				kwick.bind(o.event, function() {
 					// calculate previous width or heights and left or top values
 					var prevWoHs = []; // prevWoHs = previous Widths or Heights
@@ -156,3 +156,4 @@
 		});
 	};
 })(jQuery);
+
