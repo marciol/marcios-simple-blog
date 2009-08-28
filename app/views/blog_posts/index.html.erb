@@ -1,7 +1,7 @@
 <% for post in @blog_posts do %>
   <div class="content_piece">
     <div class="title">
-      <% link_to blog_post_path(post) do %>
+      <% link_to blog_post_path(post.permalink) do %>
         <h2><%= post.name %></h2>
       <% end -%>
       <p>
