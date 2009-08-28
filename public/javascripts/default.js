@@ -9,6 +9,10 @@ $(function(){
          spacing : 1 
      });
 
+    $("#menu ul li").click(function(){
+      window.location = $(this).children()[0].href;
+    });
+
     $("#portfolio-images a").slimbox(
       {
         counterText: slimbox_counter_text, 
