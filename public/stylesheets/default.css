@@ -26,7 +26,7 @@ div#background_layer {background:transparent url('../images/background2.jpg') no
 
 /* columns */
 
-div#rigth-column { float:left; width:702px; margin-left:3px;}
+div#rigth-column { float:left; width:702px; margin-left:3px; }
 div#left-column { float:right; width:264px;}
 
 
