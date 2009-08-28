@@ -32,7 +32,7 @@ div#left-column { float:right; width:264px;}
 
 /* title */
 
-div#title {background:#F3961F url(../images/arteprograma.jpg) no-repeat scroll left top; float:left; height:466px; margin-left:-50px; position:fixed; width:46px; margin-top:35px;}
+div#title {background:#F3961F url(../images/arteprograma.jpg) no-repeat scroll left top; float:left; height:466px; margin-left:-50px; position:fixed; width:46px; margin-top:100px;}
 div#title h1 { margin-left:-9000px;}
 
 
