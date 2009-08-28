@@ -11,7 +11,8 @@ $(function(){
 
     $("#portfolio-images a").slimbox(
       {
-        counterText: slimbox_counter_text  
+        counterText: slimbox_counter_text, 
+        captionAnimationDuration: 1700
       }, 
 
       function(el){
