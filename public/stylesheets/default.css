@@ -116,9 +116,9 @@ div.working-with-rails img {border:none;}
 
 
 /* menu */
-div#menu {float:left; height:85px; width:970px; padding-top:7px;}
-div#menu ul { overflow:hidden; margin:0px; position:relative; float:left;}
-div#menu li { display:block; overflow:hidden; cursor:pointer;}
+div#menu {float:left; height:86px; width:970px; padding-top:6px;}
+div#menu ul { overflow:hidden; margin:10px; position:relative; float:left;}
+div#menu li { display:block; overflow:hidden; cursor:pointer; width:118px; height:60px; float:left; margin:0px;}
 div#menu li#first {background-color:#233636;}
 div#menu li#first a {color:#A9E1C6;}
 div#menu li#second a {color:#A9E1C6;}
@@ -129,7 +129,7 @@ div#menu li#second {background-color:#315252;}
 div#menu li#third { background-color:#88bb9a;}
 div#menu li#fourth { background-color:#a9e1c6;}
 div#menu li#fifth { background-color:#D8F6E8; }
-div#menu li a { color:black; text-align:center; float:left; padding:19px; width:80px; font-size:16px; font-weight:bold; }
+div#menu li a { color:black; text-align:center; float:left; padding:19px; font-size:16px; font-weight:bold; }
 div#menu li:hover { background-color:#D6A7B8 !important;}
 div#menu li:hover a { color:#B62559 !important;}
 
