@@ -187,6 +187,7 @@
 		$(image).css({backgroundImage: "url(" + activeURL + ")", visibility: "hidden", display: ""});
                 console.log(activeImage );
                 console.log(activeUrl);
+                console.log(image);
 		$(caption).html(
                   activeDescription || ""
 		);
