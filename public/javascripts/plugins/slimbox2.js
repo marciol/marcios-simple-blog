@@ -185,7 +185,7 @@
 	function animateBox() {
 		center.className = "";
 		$(image).css({backgroundImage: "url(" + activeURL + ")", visibility: "hidden", display: ""});
-                console.log(activeImage);
+                console.log(activeImage );
                 console.log(activeUrl);
 		$(caption).html(
                   activeDescription || ""
