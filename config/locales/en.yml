@@ -12,6 +12,7 @@ en:
   sorry_not_allow_comments: "Sorry, comments for this post is closed!"
   message: "Message"
   comment: "Comment"
+  comment_success: "Your comments has been sent successfully!"
   send_a_comment: "Send a Comment"
   send_comment: "Send the Comment"
   name: "Name"

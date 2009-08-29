@@ -8,7 +8,7 @@ class BlogCommentsController < ApplicationController
     @comment = BlogComment.new params[:blog_comment]
     if @comment.valid?
       @blog_post.blog_comments << @comment
-      flash[:notice] = "Your comments has been sent successfully!"
+      flash[:notice] = I18n.t(:comment_success) 
       redirect_to blog_post_path(@blog_post.permalink)
     else
       render 'blog_posts/show'

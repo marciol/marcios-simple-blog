@@ -16,6 +16,7 @@ pt-BR:
   dont_be_published: "(não será publicado)"
   site: "Site"
   comments: "Comentários"
+  comment_success: "Seu comentário foi enviado com sucesso!"
   read_more: "leia mais &rarr;"
   created_by: "Desenvolvido por"
   welcome: "Bem-vindo"
