@@ -160,6 +160,7 @@
 	}
 
 	function next() {
+                console.log(nextImage);
 		return changeImage(nextImage);
 	}
 
@@ -185,9 +186,6 @@
 	function animateBox() {
 		center.className = "";
 		$(image).css({backgroundImage: "url(" + activeURL + ")", visibility: "hidden", display: ""});
-                console.log(activeImage );
-                console.log(activeURL);
-                console.log(image);
 		$(caption).html(
                   activeDescription || ""
 		);
