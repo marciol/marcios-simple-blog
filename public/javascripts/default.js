@@ -13,7 +13,7 @@ $(function(){
       window.location = $(this).children()[0].href;
     });
 
-    $("#portfolio-images a").slimbox(
+    $("#portfolio-images li a").slimbox(
       {
         counterText: slimbox_counter_text, 
         captionAnimationDuration: 1700

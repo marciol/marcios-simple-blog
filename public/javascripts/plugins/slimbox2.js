@@ -160,7 +160,6 @@
 	}
 
 	function next() {
-                console.log(nextImage);
 		return changeImage(nextImage);
 	}
 
