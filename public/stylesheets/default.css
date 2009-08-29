@@ -5,7 +5,7 @@
 
 /* tag definitions */
 
-body { background:#a9e1c6 url('../images/background_layer.jpg') repeat-y top center; font:14px "trebuchet MS", Verdana, Arial;}
+body { background:#a9e1c6 url('../images/background_layer.jpg') repeat-y top center; font:12px "trebuchet MS", Verdana, Arial;}
 a { text-decoration:none;}
 h2 {padding:10px;}
 p, ol, ul, li  {color:#233636; margin:10px; line-height:20px; font-size:14px;}
