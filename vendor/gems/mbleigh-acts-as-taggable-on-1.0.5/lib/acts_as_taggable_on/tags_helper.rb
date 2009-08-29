@@ -5,7 +5,6 @@ module TagsHelper
     
     tags.each do |tag|
       index = ((tag.count / max_count) * (classes.size - 1)).round
-      debugger
       yield tag, classes[index]
     end
   end
