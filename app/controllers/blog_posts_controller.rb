@@ -3,7 +3,8 @@ class BlogPostsController < ApplicationController
   before_filter :build_tags
 
   def index
-    @blog_posts = BlogPost.list :page => params[:page]
+    @blog_posts = BlogPost.all
+#    @blog_posts = BlogPost.list :page => params[:page]
     @metatag_object = Page.find_by_permalink('blog')
     respond_to do |wants|
       wants.html
