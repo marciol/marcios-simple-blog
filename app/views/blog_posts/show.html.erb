@@ -15,7 +15,7 @@
     <ul>
       <% for comment in @blog_post.blog_comments do %>
         <li class=<%= cycle("even", "odd") %>>
-          <p class="author"><%= author(comment) %> disse em 21 de Agosto de 2009</p>
+          <p class="author"><%= author(comment) %> disse em <%= I18n.l(comment.created_at.to_date, :format => :long) %></p>
           <%= simple_format(sanitize(comment.content)) %>
         </li>
       <% end -%>

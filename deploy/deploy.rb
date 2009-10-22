@@ -1,13 +1,13 @@
 # =============================================================================
 # CONFIGURE OS VALORES DE ACORDO COM SUA HOSPEDAGEM
 # =============================================================================
-set :user, "user"
-set :password, "password"
-set :host, "server_ip"
-set :domain, "domain.com"
-set :application, "app_name"
+set :user, "arteprograma"
+set :password, "universo8" 
+set :host, "ftp.arteprograma.com.br"
+set :domain, "arteprograma.com.br"
+set :application, "arteprograma"
 
-set :repository, "git://dburnsdesign.com/repos/mainline.git"
+set :repository, "git://github.com/marciol/marcios-simple-blog.git"
 set :branch,     "origin/master"
 # =============================================================================
 # NAO MEXER DAQUI PARA BAIXO
@@ -16,11 +16,9 @@ role :web, host
 role :app, host
 role :db,  host
 
-set :deploy_to, "/home/#{user}" 
+set :deploy_to, "/home/#{user}/rails_apps/#{application}" 
 
 set :scm, :git
-
-set :current_release, 
 
 ssh_options[:username] = user
 ssh_options[:paranoid] = false
@@ -28,9 +26,14 @@ ssh_options[:paranoid] = false
 # TAREFAS - NAO MEXER A MENOS QUE SAIBA O QUE ESTA FAZENDO
 # =============================================================================
 
+after :update do
+  run "rake gems:build"
+end
+
 desc "send config files to server"
 task :before_setup do
   
+  run "test -d #{deploy_to} || mkdir -m 755 #{deploy_to}"
   run "test -d #{deploy_to}/etc || mkdir -m 755 #{deploy_to}/etc"
   upload File.join(File.dirname(__FILE__), "templates/database.yml"), "#{deploy_to}/etc/database.yml"
   upload File.join(File.dirname(__FILE__), "templates/backup.rb"), "#{deploy_to}/etc/backup.rb"
@@ -41,7 +44,7 @@ end
 namespace :deploy do
   desc "Restart with Passenger"
   task :restart, :roles => :app do
-    run "touch #{deploy_to}/current/tmp/restart.txt"
+    run "> #{deploy_to}/current/tmp/restart.txt"
   end
  
   desc "Setup a GitHub-style deployment."
@@ -63,11 +66,12 @@ namespace :deploy do
   task :symlink do
     on_rollback {}
     run <<-CMD
-      rm -rf #{current_path}/log #{current_path}/public/system #{current_path}/tmp/pids #{current_path}/config/database.yml &&
+      rm -rf #{current_path}/log #{current_path}/public/system #{current_path}/tmp/pids #{current_path}/config/database.yml  /home/#{user}/public_html/#{application} &&
       ln -s #{shared_path}/log #{current_path}/log &&
       ln -s #{shared_path}/system #{current_path}/public/system &&
       ln -s #{shared_path}/pids #{current_path}/tmp/pids &&
       ln -s #{deploy_to}/etc/database.yml #{current_path}/config/database.yml &&
+      ln -s #{current_path}/public /home/#{user}/public_html/#{application} &&
       cd #{current_path} && rake db:migrate RAILS_ENV=production &&
       rm -f $(find public -name *.html | grep -v public/javascripts)
     CMD

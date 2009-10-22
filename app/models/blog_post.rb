@@ -54,7 +54,7 @@ class BlogPost < ActiveRecord::Base
       to = from + 1.day   unless day.blank?
       return [from, to]
     else
-      return [DateTime.current.at_beginning_of_month, DateTime.current.at_end_of_month]
+      return [DateTime.now.at_beginning_of_month, DateTime.now.at_end_of_month]
     end
   end
 end
